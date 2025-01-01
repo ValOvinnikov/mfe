@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useState, useEffect } from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
 import {
   StylesProvider,
   createGenerateClassName,
@@ -12,6 +12,7 @@ import Header from "./components/Header";
 const MarketingApp = lazy(() => import("./components/MarketingApp"));
 const AuthApp = lazy(() => import("./components/AuthApp"));
 const DashboardApp = lazy(() => import("./components/DashboardApp"));
+
 const generateClassName = createGenerateClassName({
   productionPrefix: "co",
 });
